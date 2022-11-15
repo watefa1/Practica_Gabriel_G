@@ -28,7 +28,7 @@
             <thead class="thead-dark">
                 <tr> 
 								<th scope="col">Nº</th>
-                <th scope="col">Tag</th>
+                <th scope="col">Tags</th>
                 <th scope="col">Modificar</th>
                 </tr>
             </thead>
