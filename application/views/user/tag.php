@@ -20,6 +20,7 @@
 		<FONT COLOR="cyan"> 
         <h1 class="mt-5">Lista de tags</h1>
         <div class="text-right">
+		<a href="<?php echo base_url(); ?>cosas" class="btn btn-danger btn-outline-warning">Lista de cosas</a>
         <a href="<?php echo base_url(); ?>agregar" class="btn btn-primary btn-outline-warning">Agregar cosa o tag</a> 
 		</FONT>
         </div>
@@ -32,12 +33,12 @@
                 </tr>
             </thead>
 						<tbody>
-						<?php $number=0; foreach($data5 as $key => $value): ?>
+						<?php $number=0; foreach($data as $key => $value): ?>
 							<tr>
 										<th scope="row"><?php echo $number++; ?></th>
 										<td><?php echo $value->tag; ?></td>
 										<td>
-                        <a href="<?php echo base_url(); ?>modificar/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
+                        <a href="<?php echo base_url(); ?>modificar/<?php echo $value->id;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
                         <a href="" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
                     </td>
 				</tr>

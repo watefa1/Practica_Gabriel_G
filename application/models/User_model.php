@@ -26,6 +26,13 @@ class User_model extends CI_Model {
 		$results=$this->db->get();
 		return $results->result();
 	}
+	
+	public function getTags(){
+		$this->db->select("*");
+		$this->db->from("tag");
+		$results=$this->db->get();
+		return $results->result();
+	}
 
 	public function getCosa($id_cosa){
 		$this->db->select("c.*");

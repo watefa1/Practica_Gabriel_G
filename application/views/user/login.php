@@ -16,7 +16,7 @@
     <label for="password"><h4>Contraseña</h4></label> </FONT>
     <input type="password" class="form-control form-control-lg" name="password" id="password"> 
   </div><center>
-    <input type="submit" class="btn btn-outline-light" value="Ingresar"></input>
+    <input type="submit" href="<?php echo base_url(); ?>login" class="btn btn-outline-light" value="Ingresar"></input>
 	<a href="<?php echo base_url(); ?>register" class="btn btn-outline-warning" role="button">Registrarte</a>
 		</center>
 </form>

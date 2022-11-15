@@ -7,8 +7,8 @@
   </head>
   <body background="Home.png">
 	<h1 class="mt-5">editar cosa:  <?php echo $cosas; ?> |editar tag: <?php echo $tag;?></h1> 
-	<form action="<?php echo base_url(); ?>modificar/update <?php echo $id_cosa(); ?>" class="mt-4" method="POST">
-<form method="post" action="" name="signup-form">
+	<form action="<?php echo base_url(); ?>modificar/update <?php echo $id_cosa; ?>" class="mt-4" method="POST">
+<form method="POST" action="" name="signup-form">
 	<label><h4>Nombre de la cosa</h4></label>  
     <div class="form-element form-element-lg">
         <input class="shadow px-5 p-3 mb-5 bg-white rounded" type="text" name="cosas" value="<?php echo $cosas; ?>"/>
