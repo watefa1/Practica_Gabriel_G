@@ -21,7 +21,7 @@
         <h1 class="mt-5">Lista de tags</h1>
         <div class="text-right">
 		<a href="<?php echo base_url(); ?>cosas" class="btn btn-danger btn-outline-warning">Lista de cosas</a>
-        <a href="<?php echo base_url(); ?>agregar" class="btn btn-primary btn-outline-warning">Agregar cosa o tag</a> 
+        <a href="<?php echo base_url(); ?>agregartag" class="btn btn-primary btn-outline-warning">Agregar tag</a> 
 		</FONT>
         </div>
         <table class="table table-dark">
