@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'welcome';
 $route['cosas'] = 'user/Cosas';
+$route['tags'] = 'user/Tag';
 $route['agregar'] = 'user/Add';
 $route['Editar usuario'] = 'user/Edit';
 $route['login'] = 'user/Login';

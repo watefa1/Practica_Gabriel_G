@@ -12,15 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>body{font-family:"Roboto" !important;}</style>
 
-    <title>Lista de cosas</title>
+    <title>Lista de tags</title>
   </head>
   <body background="Home.png">
 
     <div class="container">
 		<FONT COLOR="cyan"> 
-        <h1 class="mt-5">Lista de cosas</h1>
+        <h1 class="mt-5">Lista de tags</h1>
         <div class="text-right">
-				<a href="<?php echo base_url(); ?>tags" class="btn btn-danger btn-outline-warning">Lista de tag</a> 
         <a href="<?php echo base_url(); ?>agregar" class="btn btn-primary btn-outline-warning">Agregar cosa o tag</a> 
 		</FONT>
         </div>
@@ -28,7 +27,6 @@
             <thead class="thead-dark">
                 <tr> 
 								<th scope="col">Nº</th>
-                <th scope="col">Nombre</th>
                 <th scope="col">Tag</th>
                 <th scope="col">Modificar</th>
                 </tr>
@@ -37,7 +35,6 @@
 						<?php $number=0; foreach($data5 as $key => $value): ?>
 							<tr>
 										<th scope="row"><?php echo $number++; ?></th>
-										<td><?php echo $value->cosas; ?></td>
 										<td><?php echo $value->tag; ?></td>
 										<td>
                         <a href="<?php echo base_url(); ?>modificar/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
