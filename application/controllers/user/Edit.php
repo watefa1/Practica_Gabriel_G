@@ -19,34 +19,20 @@ class Edit extends CI_Controller {
 
 	public function update($id_cosa){
 		$cosas = $this->input->post("cosas");
-		$tag = $this->input->post("tag");
 
 		$this->form_validation->set_rules('cosas', 'Cosas');
-		$this->form_validation->set_rules('tag', 'Tag');
-
 		if ($this->form_validation->run() == FALSE)
 		{
 				$this->load->view('user/edit');
 		}
 		else
 		{
-			$data3 = array(
-				"cosas"=>$cosas,
-				"tag"=>$tag,
+			$data1 = array(
+			"cosas"=>$cosas,
 			);
 
-		$data1 = array(
-			"cosas"=>$cosas,
-		);
-
-		$data2 = array(
-			"tag"=>$tag,
-		);
-
-		$this->User_model->update($data1);
-
-		$this->User_model->update($data2);
-		$this->session->set_flashdata('sucess', '¡Se han editado los datos correctamente!');
+	$this->User_model->update($data1);
+	$this->session->set_flashdata('sucess', '¡Se han editado los datos correctamente!');
 		redirect(base_url()."cosas");
 	}
 	}
