@@ -20,6 +20,8 @@ class Register extends CI_Controller {
 		$password = $this->input->post("password");
 		$username = $this->input->post("username");
 
+		$passwordenc = password_hash($password,PASSWORD_DEFAULT);
+
 		$this->form_validation->set_rules(
 			'username', 'Username',
 			'required|min_length[3]|max_length[12]|is_unique[users.username]',
@@ -39,7 +41,7 @@ class Register extends CI_Controller {
 		{
 			$data3 = array(
 				"username"=>$username,
-				"password"=>$password,
+				"password"=>$passwordenc,
 			);
 	
 			$this->User_model->save3($data3);
