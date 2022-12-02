@@ -12,7 +12,7 @@ class Tag extends CI_Controller {
 	
 	public function index()
 	{
-		$data = array ("data"=>$this->User_model->getTags());
+		$data = array ("data"=>$this->User_model->getTag());
 
 		$this->load->view('user/tag',$data);
 	}

@@ -17,7 +17,7 @@
       <input type="password" name="password" required="">
       <label>Contraseña</label>
     </div>
-	<a class="btn btn-outline-warning btn-lg" type="submit" name="register" value="register">
+	<a class="btn btn-outline-link btn-lg" type="submit" name="register" value="register">
       <span></span>
       <span></span>
       <span></span>

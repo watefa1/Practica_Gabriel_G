@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+		<link href="style.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Font Roboto CSS -->
@@ -14,14 +14,29 @@
 
     <title>Lista de tags</title>
   </head>
-  <body background="Home.png">
+  <body>
 
     <div class="container">
 		<FONT COLOR="cyan"> 
         <h1 class="mt-5">Lista de tags</h1>
-        <div class="text-right">
-		<a href="<?php echo base_url(); ?>cosas" class="btn btn-danger btn-outline-warning">Lista de cosas</a>
-        <a href="<?php echo base_url(); ?>agregartag" class="btn btn-primary btn-outline-warning">Agregar tag</a> 
+				<div class="text-right">
+				<link href="boton.css" rel="stylesheet" type="text/css">	
+				<a href="<?php echo base_url(); ?>cosas" class="btn btn-dark btn-outline-primary">
+  
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+   Cosas
+  </a>
+	<a href="<?php echo base_url(); ?>agregartag" class="btn btn-dark btn-outline-primary">
+  
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+   Agregar
+  </a>
 		</FONT>
         </div>
         <table class="table table-dark">
