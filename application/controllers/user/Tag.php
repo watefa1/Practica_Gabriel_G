@@ -16,5 +16,12 @@ class Tag extends CI_Controller {
 
 		$this->load->view('user/tag',$data);
 	}
+
+	public function deletag($id){
+		$this->User_model->deletag($id);
+		$this->session->set_flashdata('sucess', '¡El tag fue eliminada correctamente!');
+		redirect(base_url()."tags");
+	}
 	
-		}
+}
+

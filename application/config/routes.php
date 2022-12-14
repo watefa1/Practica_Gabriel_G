@@ -16,6 +16,7 @@ $route['agregartag/save'] = 'user/Addt/save';
 $route['modificar/(:num)'] = 'user/Edit/index/$1';
 $route['modificar/update/(:num)'] = 'user/Edit/update/$1';
 $route['cosas/delete/(:num)'] = 'user/Cosas/delete/$1';
+$route['tag/delete/(:num)'] = 'user/Tag/deletag/$1';
 $route['modificartag/(:num)'] = 'Editag/index/$1';
 $route['modificartag/update/(:num)'] = 'Editag/update/$1';
 $route['404_override'] = '';
