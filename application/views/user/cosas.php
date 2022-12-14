@@ -18,7 +18,7 @@
 
     <div class="container">
 		<FONT COLOR="cyan"> 
-        <h1 class="mt-5">Lista de cosas</h1>
+        <h1 class="neon">Lista de cosas</h1>
         <div class="text-right">
 				<link href="boton.css" rel="stylesheet" type="text/css">	
 				<a href="<?php echo base_url(); ?>tags" class="btn btn-dark btn-outline-primary">
@@ -56,7 +56,7 @@
 										<td><?php echo $value->tag; ?></td>
 										<td>
                         <a href="<?php echo base_url(); ?>modificar/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
-                        <a href="" class="btn btn-danger"><ion-icon name="remove"></ion-icon></a>
+                        <a href="<?php echo base_url(); ?>user/Cosas/delete/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="remove"></ion-icon></a>
                     </td>
 				</tr>
 			<?php endforeach; ?>

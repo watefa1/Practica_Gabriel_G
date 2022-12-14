@@ -27,7 +27,7 @@ class User_model extends CI_Model {
 		return $results->result();
 	}
 	
-	public function getTags(){
+	public function getTag(){
 		$this->db->select("*");
 		$this->db->from("tag");
 		$results=$this->db->get();
@@ -40,5 +40,23 @@ class User_model extends CI_Model {
 		$this->db->where("c.id_cosa",$id_cosa);
 		$results=$this->db->get();
 		return $results->row();
+	}
+
+	public function getId($id){
+		$this->db->select("t.*");
+		$this->db->from("tag t");
+		$this->db->where("t.id",$id);
+		$results=$this->db->get();
+		return $results->row();
+	}
+
+	public function update($data1,$id_cosa){
+		$this->db->where("id_cosa",$id_cosa);
+		$this->db->update("cosas",$data1);
+	}
+
+	public function delete($id_cosa){
+		$this->db->where("id_cosa",$id_cosa);
+		$this->db->delete("cosas");
 	}
 }

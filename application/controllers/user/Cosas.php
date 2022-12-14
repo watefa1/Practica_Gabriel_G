@@ -16,5 +16,11 @@ class Cosas extends CI_Controller {
 
 		$this->load->view('user/cosas',$data5);
 	}
+
+	public function delete($id_cosa){
+		$this->User_model->delete($id_cosa);
+		$this->session->set_flashdata('sucess', '¡La cosa fue eliminada correctamente!');
+		redirect(base_url()."cosas");
+	}
 	
-		}
+}
