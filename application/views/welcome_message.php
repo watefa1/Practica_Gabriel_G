@@ -12,13 +12,13 @@
 		
     <title>gguevara practica</title>
   </head>
-  <body background="fon1.png">
+  <body">
 	<div class="container">
 		<FONT COLOR="cyan"> 
         <h1 class="neon">Bienvenido</h1>
         <div class="text-right">
 				<link href="boton.css" rel="stylesheet" type="text/css">	
-				<a href="login" class="btn btn-lg btn-block btn-outline-warning" role="button">
+				<a href="login" class="btn btn-lg btn-block btn-outline-primary" role="button">
 				<span></span>
         <span></span>
         <span></span>
