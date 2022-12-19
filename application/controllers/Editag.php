@@ -13,13 +13,13 @@ class Editag extends CI_Controller {
 	public function index($id)	
 	{
 		
-		$data=$this->User_model->getTags($id);
-		$this->load->view("user/editag",$data);
+		$data8=$this->User_model->getTag($id);
+		$this->load->view("user/editag",$data8);
 	}	
 
 	public function update($id){
 		$tag = $this->input->post("tag");
-
+		
 		$this->form_validation->set_rules('tag', 'Tag');
 
 		if ($this->form_validation->run() == FALSE)
@@ -28,14 +28,12 @@ class Editag extends CI_Controller {
 		}
 		else
 		{
-			$data = array(
+			$data2 = array(
 				"tag"=>$tag,
 			);
-			$data = array(
-				"tag"=>$tag,
-			);
+			
 
-		$this->User_model->update($data);
+		$this->User_model->update($data2);
 		$this->session->set_flashdata('sucess', '¡Se han editado los datos correctamente!');
 		redirect(base_url()."tag");
 	}

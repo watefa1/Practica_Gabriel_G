@@ -64,4 +64,12 @@ class User_model extends CI_Model {
 		$this->db->where("id",$id);
 		$this->db->delete("tag");
 	}
+
+	public function getPassword($password){
+		$this->db->select("*");
+		$this->db->from("users u");
+		$this->db->where("u.password",$password);
+		$results=$this->db->get();
+		return $results->row();
+	}
 }

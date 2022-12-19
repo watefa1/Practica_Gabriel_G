@@ -24,7 +24,7 @@
       <input type="password" name="password" required="">
       <label>Contraseña</label>
     </div>
-    <a href="#">
+    <a type="submit" href="#">
       <span></span>
       <span></span>
       <span></span>

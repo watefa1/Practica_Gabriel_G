@@ -31,7 +31,7 @@ class Edit extends CI_Controller {
 			"cosas"=>$cosas,
 			);
 
-	$this->User_model->update($data1);
+	$this->User_model->update($data1,$id_cosa);
 	$this->session->set_flashdata('sucess', '¡Se han editado los datos correctamente!');
 		redirect(base_url()."cosas");
 	}

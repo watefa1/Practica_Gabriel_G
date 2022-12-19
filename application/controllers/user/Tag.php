@@ -19,7 +19,7 @@ class Tag extends CI_Controller {
 
 	public function deletag($id){
 		$this->User_model->deletag($id);
-		$this->session->set_flashdata('sucess', '¡El tag fue eliminada correctamente!');
+		$this->session->set_flashdata('sucess', '¡El tag fue eliminado correctamente!');
 		redirect(base_url()."tags");
 	}
 	

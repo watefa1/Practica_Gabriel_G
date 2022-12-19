@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+	<link href="style.css" rel="stylesheet" type="text/css">
 	 <!-- Bootstrap CSS -->
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	 <FONT COLOR="cyan"> <h1><center> Modificar Cosa </center></h1> 
+	 <FONT COLOR="red"> <h1><center> Modificar Cosa </center></h1> 
   </head>
-  <body background="Home.png">
+  <body>
 	<h1 class="mt-5">editar cosa:  <?php echo $cosas;?></h1> 
-	<form action="<?php echo base_url(); ?>modificar/update <?php echo $id_cosa; ?>" class="mt-4" method="POST">
+	<form action="<?php echo base_url(); ?>modificar/update/<?php echo $id_cosa; ?>" class="mt-4" method="POST">
 <form method="POST" action="" name="signup-form">
 	<label><h4>Nombre de la cosa</h4></label>  
     <div class="form-element form-element-lg">
