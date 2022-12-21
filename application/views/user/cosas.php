@@ -44,7 +44,7 @@
                 <tr> 
 								<th scope="col">Nº</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Tag</th>
+                <th scope="col">Tag/s</th>
                 <th scope="col">Modificar</th>
                 </tr>
             </thead>
@@ -55,9 +55,9 @@
 										<td><?php echo $value->cosas; ?></td>
 										<td><?php echo $value->tag; ?></td>
 										<td>
-									    	<a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><ion-icon name="add"></ion-icon></a> 
-                        <a href="<?php echo base_url(); ?>modificar/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
-                        <a href="<?php echo base_url(); ?>user/Cosas/delete/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="remove"></ion-icon></a>
+									    	<a href="" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><ion-icon name="git-merge"></ion-icon>
+                        <a href="<?php echo base_url(); ?>modificar/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="brush"></ion-icon>
+                        <a href="<?php echo base_url(); ?>user/Cosas/delete/<?php echo $value->id_cosa;?>" class="btn btn-primary"><ion-icon name="trash-bin"></ion-icon>
                     </td>
 				</tr>
 			<?php endforeach; ?>
@@ -69,13 +69,34 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Asignar tag</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <h5 class="modal-title" id="exampleModalLabel">Asignar tag</h5> </div>
+				
         </button>
-      </div>
       <div class="modal-body">
-        ...
+			</div>
+        <table class="table table-dark">
+            <thead class="thead-dark">
+                <tr> 
+								<th scope="col">Nº</th>
+                <th scope="col">Tags</th>
+                <th scope="col">Modificar</th>
+                </tr>
+            </thead>
+						<tbody>
+						<?php $number=0; foreach($data2 as $key => $value): ?>
+							<tr>
+										<th scope="row"><?php echo $number++; ?></th>
+										<td><?php echo $value->tag; ?></td>
+										<td>
+                        <a href="<?php echo base_url(); ?>modificartag/<?php echo $value->id;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
+                        <a href="<?php echo base_url(); ?>tag/delete/<?php echo $value->id;?>" class="btn btn-primary"><ion-icon name="remove"></ion-icon></a>
+                    </td>
+				</tr>
+			<?php endforeach; ?>
+				</tbody>
+            
+        </table>
+    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -84,6 +105,8 @@
     </div>
   </div>
 </div>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
