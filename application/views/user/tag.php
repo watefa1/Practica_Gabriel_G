@@ -53,7 +53,7 @@
 										<th scope="row"><?php echo $number++; ?></th>
 										<td><?php echo $value->tag; ?></td>
 										<td>
-                        <a href="<?php echo base_url(); ?>modificartag/<?php echo $value->id;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
+                        <a href="<?php echo base_url(); ?>tags/<?php echo $value->id;?>" class="btn btn-primary"><ion-icon name="pencil"></ion-icon></a> 
                         <a href="<?php echo base_url(); ?>tag/delete/<?php echo $value->id;?>" class="btn btn-primary"><ion-icon name="remove"></ion-icon></a>
                     </td>
 				</tr>
