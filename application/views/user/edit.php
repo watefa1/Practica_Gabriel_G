@@ -1,23 +1,40 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<link href="style.css" rel="stylesheet" type="text/css">
-	 <!-- Bootstrap CSS -->
-	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	 <FONT COLOR="red"> <h1><center> Modificar Cosa </center></h1> 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>body{font-family:"Roboto" !important;}</style>
+    
+    <title>Editar cosa</title>
   </head>
   <body>
-	<h1 class="mt-5">editar cosa:  <?php echo $cosas;?></h1> 
-	<form action="<?php echo base_url(); ?>modificar/update/<?php echo $id_cosa; ?>" class="mt-4" method="POST">
-<form method="POST" action="" name="signup-form">
-	<label><h4>Nombre de la cosa</h4></label>  
-    <div class="form-element form-element-lg">
-        <input class="shadow px-5 p-3 mb-5 bg-white rounded" type="text" name="cosas" value="<?php echo $cosas; ?>"/>
+	<center>
+    <div class="container">
+        <h1 class="mt-5">Editar cosa: <?php echo $cosas; ?></h1> 
+        <form action="<?php echo base_url(); ?>cosas/update/<?php echo $id_cosa; ?>" class="mt-4" method="POST">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="text" name="cosas" class="form-control btn-lg" value="<?php echo $cosas; ?>">
+                    </div>
+                    </div>
+                </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </form>
     </div>
-		 <center>
-    <button class="btn btn-outline-warning btn-lg" type="submit" name="agregar" value="enviar">Agregar</button>
 	</center>
-</form>
-</form>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
   </body>
 </html>

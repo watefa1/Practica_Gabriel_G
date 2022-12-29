@@ -7,33 +7,26 @@ class Edit extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model("User_model");
-		
 	}
 	
 	public function index($id_cosa)	
 	{
-		
-		$data7=$this->User_model->getCosa($id_cosa);
-		$this->load->view("user/edit",$data7);
+		$data1=$this->User_model->getCosa($id_cosa);
+		$this->load->view("user/edit",$data1);
 	}	
 
 	public function update($id_cosa){
 		$cosas = $this->input->post("cosas");
 
-		$this->form_validation->set_rules('cosas', 'Cosas');
-		if ($this->form_validation->run() == FALSE)
-		{
-				$this->load->view('user/edit');
-		}
-		else
-		{
+		$data1=$this->User_model->getCosa($id_cosa);
+
+		
 			$data1 = array(
-			"cosas"=>$cosas,
-			);
+			"cosas"=>$cosas);
 
 	$this->User_model->update($data1,$id_cosa);
-	$this->session->set_flashdata('sucess', '¡Se han editado los datos correctamente!');
+	$this->session->set_flashdata('sucess', '¡Se ha editado la cosa correctamente!');
 		redirect(base_url()."cosas");
 	}
 	}
-}
+

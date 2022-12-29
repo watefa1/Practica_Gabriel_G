@@ -50,11 +50,6 @@ class User_model extends CI_Model {
 		return $results->row();
 	}
 
-	public function update($data1,$id_cosa){
-		$this->db->where("id_cosa",$id_cosa);
-		$this->db->update("cosas",$data1);
-	}
-
 	public function delete($id_cosa){
 		$this->db->where("id_cosa",$id_cosa);
 		$this->db->delete("cosas");
@@ -65,11 +60,25 @@ class User_model extends CI_Model {
 		$this->db->delete("tag");
 	}
 
-	public function getPassword($password){
+	public function getUsers(){
 		$this->db->select("*");
 		$this->db->from("users u");
-		$this->db->where("u.password",$password);
+		$results=$this->db->get();
+		return $results->result();
+	}
+
+	public function getTags($data2){
+		$this->db->select("*");
+		$this->db->from("tag t");
+		$this->db->where("t.tag",$data2);
 		$results=$this->db->get();
 		return $results->row();
 	}
+
+	public function update($data1,$id_cosa){
+		$this->db->select("*");
+		$this->db->from("cosas t");
+        $this->db->where("id_cosa",$id_cosa);
+        $this->db->update("cosas",$data1);
+    }
 }
