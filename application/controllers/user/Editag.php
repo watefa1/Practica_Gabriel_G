@@ -16,7 +16,7 @@ class Editag extends CI_Controller {
 	}	
 
 	public function updatetag($id){
-		$tag = $this->input->post("tag");
+		$tag = $this->input->post("tags");
 
 		$data2=$this->User_model->getTags($id);
 

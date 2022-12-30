@@ -26,6 +26,15 @@ class User_model extends CI_Model {
 		$results=$this->db->get();
 		return $results->result();
 	}
+
+	
+	public function getCosa($id_cosa){
+		$this->db->select("c.*");
+		$this->db->from("cosas c");
+		$this->db->where("c.id_cosa",$id_cosa);
+		$results=$this->db->get();
+		return $results->row();
+	}
 	
 	public function getTag(){
 		$this->db->select("*");
@@ -34,13 +43,14 @@ class User_model extends CI_Model {
 		return $results->result();
 	}
 
-	public function getCosa($id_cosa){
-		$this->db->select("c.*");
-		$this->db->from("cosas c");
-		$this->db->where("c.id_cosa",$id_cosa);
+	public function getTags($id){
+		$this->db->select("t.*");
+		$this->db->from("tag t");
+		$this->db->where("t.id",$id);
 		$results=$this->db->get();
 		return $results->row();
 	}
+
 
 	public function getId($id){
 		$this->db->select("t.*");
@@ -67,18 +77,17 @@ class User_model extends CI_Model {
 		return $results->result();
 	}
 
-	public function getTags($data2){
-		$this->db->select("*");
-		$this->db->from("tag t");
-		$this->db->where("t.tag",$data2);
-		$results=$this->db->get();
-		return $results->row();
-	}
-
 	public function update($data1,$id_cosa){
 		$this->db->select("*");
 		$this->db->from("cosas t");
         $this->db->where("id_cosa",$id_cosa);
         $this->db->update("cosas",$data1);
+    }
+
+	public function updatetag($data2,$id){
+		$this->db->select("*");
+		$this->db->from("tag t");
+        $this->db->where("id",$id);
+        $this->db->update("tag",$data2);
     }
 }
